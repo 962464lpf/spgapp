@@ -30,7 +30,7 @@ export default {
     overflow: auto;
   }
   .my-footer {
-    height: 0.6rem;
+    height: 3rem;
   }
 }
 </style>

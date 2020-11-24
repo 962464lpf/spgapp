@@ -5,7 +5,12 @@
     </div>
     <div class="content">
       <ul class="ul-1">
-        <li @click="jumpTo('/gzdb')">工作代办</li>
+        <li @click="jumpTo('/gzdb')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            工作代办
+          </p>
+        </li>
         <li @click="jumpTo('/kqdk')">考勤打卡</li>
         <li @click="jumpTo('/pgd')">派工单</li>
       </ul>
@@ -39,20 +44,17 @@ export default {
 
 <style scoped lang="scss">
 .index {
-  font-size: 0.3rem;
+  // font-size: 0.3rem;
   .tq {
-    height: 1.2rem;
-    border-bottom: 1px solid black;
+    height: 6rem;
   }
   .content {
     width: 100%;
     .ul-1 {
-      border-bottom: 1px solid black;
-      height: 1.2rem;
+      height: 6rem;
     }
     .ul-2 {
-      border-bottom: 1px solid black;
-      height: 1rem;
+      height: 5rem;
     }
     ul {
       width: 100%;
@@ -62,20 +64,24 @@ export default {
       li {
         height: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 23%;
-        font-size: 0.1rem;
+        font-size: 1rem;
         box-sizing: border-box;
+        i {
+          font-size: 2rem;
+          color: yellowgreen;
+        }
       }
     }
   }
   .qt {
     .jp {
-      height: 1.2rem;
+      height: 6rem;
       text-align: center;
-      line-height: 1.2rem;
-      border-bottom: 1px solid black;
+      line-height: 6rem;
     }
   }
 }

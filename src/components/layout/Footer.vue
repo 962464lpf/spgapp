@@ -26,6 +26,6 @@ export default {
 
 <style scoped lang="scss">
 .footer {
-  font-size: 0.2rem;
+  // font-size: 0.2rem;
 }
 </style>
