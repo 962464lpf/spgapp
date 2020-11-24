@@ -11,14 +11,44 @@
             工作代办
           </p>
         </li>
-        <li @click="jumpTo('/kqdk')">考勤打卡</li>
-        <li @click="jumpTo('/pgd')">派工单</li>
+        <li @click="jumpTo('/kqdk')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            考勤打卡
+          </p>
+        </li>
+        <li @click="jumpTo('/pgd')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            派工单
+          </p>
+        </li>
       </ul>
       <ul class="ul-2">
-        <li @click="jumpTo('/tj')">统计</li>
-        <li @click="jumpTo('/jk')">监控</li>
-        <li @click="jumpTo('/gqj')">工器具</li>
-        <li @click="jumpTo('/bpbj')">备品备件</li>
+        <li @click="jumpTo('/tj')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            统计
+          </p>
+        </li>
+        <li @click="jumpTo('/jk')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            监控
+          </p>
+        </li>
+        <li @click="jumpTo('/gqj')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            工器具
+          </p>
+        </li>
+        <li @click="jumpTo('/bpbj')">
+          <i class="el-icon-s-release"></i>
+          <p>
+            备品备件
+          </p>
+        </li>
       </ul>
     </div>
     <div class="qt">
@@ -78,10 +108,14 @@ export default {
     }
   }
   .qt {
+    margin-top: 0.5rem;
     .jp {
       height: 6rem;
       text-align: center;
       line-height: 6rem;
+      background: #2385a2;
+      font-size: 2rem;
+      color: white;
     }
   }
 }
