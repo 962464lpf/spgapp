@@ -1,59 +1,137 @@
 <template>
   <div class="index">
-    <div class="tq">
-      点击进入现实五天内的天气
+    <mt-header fixed title="供电所移动作业管理系统">
+      <router-link to="/index" slot="left">
+        <mt-button icon="back"></mt-button>
+      </router-link>
+      <mt-button icon="more" slot="right"></mt-button>
+    </mt-header>
+    <div class="header1">
+      <div class="info">
+        <p>
+          <i class="el-icon-user"></i>
+          <span>王小二</span>
+        </p>
+        <p>
+          <el-select v-model="value" placeholder="请选择">
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            >
+            </el-option>
+          </el-select>
+        </p>
+        <p>
+          <el-badge :value="0" class="item">
+            <i class="el-icon-bell"></i>
+          </el-badge>
+        </p>
+      </div>
+      <ul class="work">
+        <li>
+          <p>0</p>
+          <p>待办任务</p>
+        </li>
+        <li>
+          <p>0</p>
+          <p>已办任务</p>
+        </li>
+        <li>
+          <p></p>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+          <p></p>
+        </li>
+      </ul>
     </div>
     <div class="content">
-      <ul class="ul-1">
-        <li @click="jumpTo('/gzdb')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            工作代办
-          </p>
-        </li>
-        <li @click="jumpTo('/kqdk')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            考勤打卡
-          </p>
-        </li>
-        <li @click="jumpTo('/pgd')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            派工单
-          </p>
-        </li>
-      </ul>
-      <ul class="ul-2">
-        <li @click="jumpTo('/tj')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            统计
-          </p>
-        </li>
-        <li @click="jumpTo('/jk')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            监控
-          </p>
-        </li>
-        <li @click="jumpTo('/gqj')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            工器具
-          </p>
-        </li>
-        <li @click="jumpTo('/bpbj')">
-          <i class="el-icon-s-release"></i>
-          <p>
-            备品备件
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="qt">
-      <div class="jp">教育培训</div>
-      <div class="jp mt10">业务咨询</div>
+      <div class="list">
+        <h3>
+          任务
+        </h3>
+        <ul>
+          <li>
+            <p><i class="el-icon-goods"></i></p>
+            <p>考勤打卡</p>
+          </li>
+          <li @click="jumpTo('/gzdb')">
+            <p><i class="el-icon-s-order"></i></p>
+            <p>任务代办</p>
+          </li>
+
+          <li>
+            <p><i class="el-icon-s-grid"></i></p>
+            <p>工器具</p>
+          </li>
+          <li>
+            <i class="el-icon-s-comment"></i>
+            <p>备品备件</p>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <h3>
+          指标
+        </h3>
+        <ul>
+          <li>
+            <p><i class="el-icon-goods"></i></p>
+            <p>采集成功率</p>
+          </li>
+          <li>
+            <p><i class="el-icon-s-order"></i></p>
+            <p>综合线损率</p>
+          </li>
+
+          <li>
+            <p><i class="el-icon-s-grid"></i></p>
+            <p>停电成功率</p>
+          </li>
+          <li>
+            <i class="el-icon-s-comment"></i>
+            <p>线损合格率</p>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <h3>
+          我的台区
+        </h3>
+        <ul>
+          <li>
+            <p><i class="el-icon-goods"></i></p>
+            <p>台区信息</p>
+          </li>
+          <li>
+            <p><i class="el-icon-s-order"></i></p>
+            <p>客户信息查询</p>
+          </li>
+
+          <li>
+            <p><i class="el-icon-s-grid"></i></p>
+            <p>台区指标</p>
+          </li>
+        </ul>
+      </div>
+      <div class="list">
+        <h3>
+          监控统计
+        </h3>
+        <ul>
+          <li>
+            <p><i class="el-icon-goods"></i></p>
+            <p>统计</p>
+          </li>
+          <li>
+            <p><i class="el-icon-s-order"></i></p>
+            <p>监控</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -61,7 +139,15 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      options: [
+        {
+          value: '选项1',
+          label: '全部台区',
+        },
+      ],
+      value: '选项1',
+    }
   },
   methods: {
     jumpTo(path) {
@@ -72,50 +158,77 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .index {
-  // font-size: 0.3rem;
-  .tq {
-    height: 6rem;
-  }
-  .content {
-    width: 100%;
-    .ul-1 {
-      height: 6rem;
-    }
-    .ul-2 {
-      height: 5rem;
-    }
-    ul {
-      width: 100%;
+  font-size: 1.4rem;
+
+  .header1 {
+    margin-top: 40px;
+    background: #153a6e;
+    .info {
+      height: 3rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      li {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 23%;
-        font-size: 1rem;
-        box-sizing: border-box;
+      align-items: center;
+      padding: 0 10px;
+      p {
+        color: white;
+
+        i {
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 1rem;
+          margin-left: 5px;
+        }
+      }
+      p:nth-child(1) {
         i {
           font-size: 2rem;
-          color: yellowgreen;
         }
       }
     }
+    .work {
+      display: flex;
+      height: 5rem;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20px;
+      li {
+        width: 25%;
+        font-size: 1.2rem;
+        color: white;
+        text-align: center;
+        line-height: 2rem;
+      }
+    }
   }
-  .qt {
-    margin-top: 0.5rem;
-    .jp {
-      height: 6rem;
-      text-align: center;
-      line-height: 6rem;
-      background: #2385a2;
-      font-size: 2rem;
-      color: white;
+  .content {
+    padding: 20px 10px;
+    .list {
+      margin-bottom: 20px;
+      h3 {
+        font-size: 1rem;
+        padding-left: 10px;
+        border-left: 3px solid #153a6e;
+      }
+      ul {
+        display: flex;
+        // justify-content: space-around;
+        align-items: center;
+        li {
+          i {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+          }
+          margin-top: 10px;
+          width: 25%;
+          font-size: 0.8rem;
+          // line-height: 1.8rem;
+          text-align: center;
+          color: #153a6e;
+        }
+      }
     }
   }
 }

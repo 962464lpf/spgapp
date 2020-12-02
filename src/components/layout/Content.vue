@@ -1,15 +1,15 @@
 <template>
   <div class="content">
     <router-view class="router-view" />
-    <Footer class="my-footer"></Footer>
+    <!-- <Footer class="my-footer"></Footer> -->
   </div>
 </template>
 
 <script>
-import Footer from './Footer'
+// import Footer from './Footer'
 export default {
   components: {
-    Footer,
+    // Footer,
   },
   data() {
     return {}
@@ -19,14 +19,18 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100%;
+  overflow: auto;
+  .mint-header {
+    background: #153a6e;
+    h1 {
+      font-size: 1rem;
+    }
+  }
   .router-view {
-    flex: 1;
+    height: 100%;
     overflow: auto;
   }
   .my-footer {
