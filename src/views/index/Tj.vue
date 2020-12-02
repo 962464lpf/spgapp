@@ -22,18 +22,19 @@
           :data="chartData"
           :legend-visible="false"
           :extend="extend"
+          :colors="colors"
           height="300px"
         ></ve-histogram>
-        <div class="content">
-          <span>2020年11月 全部人员</span>
+        <div class="tj-content mt10">
+          <h4>2020年11月 全部人员</h4>
           <div class="num">
             <div>
               <p>工单量</p>
-              <p>5</p>
+              <b>5</b>
             </div>
             <div>
               <p>月累计工单量</p>
-              <p>524</p>
+              <b>524</b>
             </div>
           </div>
           <el-table :data="tableData" style="width: 100%">
@@ -45,10 +46,74 @@
         </div>
       </mt-tab-container-item>
       <mt-tab-container-item id="2">
-        2
+        <mt-navbar v-model="selected2">
+          <mt-tab-item id="1">全部</mt-tab-item>
+          <mt-tab-item id="2">业扩报装</mt-tab-item>
+          <mt-tab-item id="3">用电检查</mt-tab-item>
+          <mt-tab-item id="4">客户服务</mt-tab-item>
+        </mt-navbar>
+        <ve-histogram
+          v-if="selected === '2'"
+          :data="chartData1"
+          :legend-visible="false"
+          :extend="extend"
+          :colors="colors"
+          height="300px"
+        ></ve-histogram>
+        <div class="tj-content mt10">
+          <h4>2020年11月 全部人员</h4>
+          <div class="num">
+            <div>
+              <p>工单量</p>
+              <b>5</b>
+            </div>
+            <div>
+              <p>月累计工单量</p>
+              <b>524</b>
+            </div>
+          </div>
+          <el-table :data="tableData" style="width: 100%">
+            <el-table-column prop="date" label="时间"> </el-table-column>
+            <el-table-column prop="name" label="工单量"> </el-table-column>
+            <el-table-column prop="address" label="月累计工单量">
+            </el-table-column>
+          </el-table>
+        </div>
       </mt-tab-container-item>
       <mt-tab-container-item id="3">
-        3
+        <mt-navbar v-model="selected2">
+          <mt-tab-item id="1">全部</mt-tab-item>
+          <mt-tab-item id="2">业扩报装</mt-tab-item>
+          <mt-tab-item id="3">用电检查</mt-tab-item>
+          <mt-tab-item id="4">客户服务</mt-tab-item>
+        </mt-navbar>
+        <ve-histogram
+          v-if="selected === '3'"
+          :data="chartData1"
+          :legend-visible="false"
+          :extend="extend"
+          :colors="colors"
+          height="300px"
+        ></ve-histogram>
+        <div class="tj-content mt10">
+          <h4>2020年11月 全部人员</h4>
+          <div class="num">
+            <div>
+              <p>工单量</p>
+              <b>5</b>
+            </div>
+            <div>
+              <p>月累计工单量</p>
+              <b>524</b>
+            </div>
+          </div>
+          <el-table :data="tableData" style="width: 100%">
+            <el-table-column prop="date" label="时间"> </el-table-column>
+            <el-table-column prop="name" label="工单量"> </el-table-column>
+            <el-table-column prop="address" label="月累计工单量">
+            </el-table-column>
+          </el-table>
+        </div>
       </mt-tab-container-item>
     </mt-tab-container>
   </div>
@@ -62,7 +127,30 @@ export default {
       selected1: '1',
       selected2: '1',
       selected3: '1',
+      colors: ['#153a6e'],
       chartData: {
+        columns: ['日期', '数量'],
+        rows: [
+          { 日期: '11/1', 数量: 1393 },
+          { 日期: '11/2', 数量: 3530 },
+          { 日期: '11/3', 数量: 2923 },
+          { 日期: '11/4', 数量: 1723 },
+          { 日期: '11/5', 数量: 3792 },
+          { 日期: '11/6', 数量: 4593 },
+        ],
+      },
+      chartData1: {
+        columns: ['日期', '数量'],
+        rows: [
+          { 日期: '11/1', 数量: 1393 },
+          { 日期: '11/2', 数量: 3530 },
+          { 日期: '11/3', 数量: 2923 },
+          { 日期: '11/4', 数量: 1723 },
+          { 日期: '11/5', 数量: 3792 },
+          { 日期: '11/6', 数量: 4593 },
+        ],
+      },
+      chartData2: {
         columns: ['日期', '数量'],
         rows: [
           { 日期: '11/1', 数量: 1393 },
@@ -117,15 +205,27 @@ export default {
 
 <style scoped lang="scss">
 .tongji {
-  .content {
-    font-size: 0.15rem;
+  .tj-content {
+    // font-size: 0.15rem;
     text-align: center;
-    line-height: 0.3rem;
+    // line-height: 0.3rem;
+    position: relative;
+    top: -50px;
+    h4 {
+      line-height: 20px;
+    }
     .num {
       display: flex;
-      margin-top: 0.2rem;
+      margin-top: 20px;
       div {
         width: 50%;
+        font-size: 0.5rem;
+        line-height: 20px;
+        b {
+          font-size: 1rem;
+          margin-top: 8px;
+          display: inline-block;
+        }
       }
     }
   }

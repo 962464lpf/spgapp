@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 .content {
   height: 100%;
-  overflow: auto;
+  overflow: hidden;
   .mint-header {
     background: #153a6e;
     h1 {

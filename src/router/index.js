@@ -59,6 +59,11 @@ const routes = [
         name: '备品备件',
         component: () => import('../views/index/Bpbj.vue'),
       },
+      {
+        path: '/khxx',
+        name: '客户信息查询',
+        component: () => import('../views/index/Khxx.vue'),
+      },
     ],
   },
 ]

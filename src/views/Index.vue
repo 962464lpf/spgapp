@@ -106,7 +106,7 @@
             <p><i class="el-icon-goods"></i></p>
             <p>台区信息</p>
           </li>
-          <li>
+          <li @click="jumpTo('/khxx')">
             <p><i class="el-icon-s-order"></i></p>
             <p>客户信息查询</p>
           </li>
@@ -122,11 +122,11 @@
           监控统计
         </h3>
         <ul>
-          <li>
+          <li @click="jumpTo('/tj')">
             <p><i class="el-icon-goods"></i></p>
             <p>统计</p>
           </li>
-          <li>
+          <li @click="jumpTo('/jk')">
             <p><i class="el-icon-s-order"></i></p>
             <p>监控</p>
           </li>
