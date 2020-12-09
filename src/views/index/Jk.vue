@@ -167,7 +167,7 @@ export default {
         border-radius: 5px;
         text-align: center;
         color: white;
-        background: #153a6e;
+        background: $base-color;
       }
     }
   }

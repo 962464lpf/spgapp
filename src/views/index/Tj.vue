@@ -127,7 +127,7 @@ export default {
       selected1: '1',
       selected2: '1',
       selected3: '1',
-      colors: ['#153a6e'],
+      colors: ['$base-color'],
       chartData: {
         columns: ['日期', '数量'],
         rows: [

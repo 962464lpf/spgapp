@@ -49,7 +49,7 @@ export default {
 .gzdb {
   .liucheng {
     // height: 60px;
-    background: #153a6e;
+    background: $base-color;
     padding: 0 10px 10px 10px;
     box-sizing: border-box;
     padding-top: 30px;
@@ -71,7 +71,7 @@ export default {
   }
   .btn {
     height: 40px;
-    background: #153a6e;
+    background: $base-color;
     line-height: 40px;
     border-radius: 5px;
     color: white;

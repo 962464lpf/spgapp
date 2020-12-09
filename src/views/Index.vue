@@ -1,11 +1,6 @@
 <template>
   <div class="index">
-    <mt-header fixed title="供电所移动作业管理系统">
-      <router-link to="/index" slot="left">
-        <mt-button icon="back"></mt-button>
-      </router-link>
-      <mt-button icon="more" slot="right"></mt-button>
-    </mt-header>
+    <div class="title">供电所移动作业管理系统</div>
     <div class="header1">
       <div class="info">
         <p>
@@ -161,10 +156,27 @@ export default {
 <style lang="scss">
 .index {
   font-size: 1.4rem;
-
+  .title {
+    background: $base-color;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    height: 40px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 400;
+  }
   .header1 {
     margin-top: 40px;
-    background: #153a6e;
+    background: $base-color;
     .info {
       height: 3rem;
       display: flex;
@@ -210,7 +222,7 @@ export default {
       h3 {
         font-size: 1rem;
         padding-left: 10px;
-        border-left: 3px solid #153a6e;
+        border-left: 3px solid $base-color;
       }
       ul {
         display: flex;
@@ -226,7 +238,7 @@ export default {
           font-size: 0.8rem;
           // line-height: 1.8rem;
           text-align: center;
-          color: #153a6e;
+          color: $base-color;
         }
       }
     }

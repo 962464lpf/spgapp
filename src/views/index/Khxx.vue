@@ -152,7 +152,7 @@ export default {
     .btn {
       height: 28px;
       border-radius: 10px;
-      background: #153a6e;
+      background: $base-color;
       line-height: 28px;
       color: white;
       text-align: center;
@@ -165,7 +165,7 @@ export default {
       color: white;
       height: 20px;
       width: 60px;
-      background: #153a6e;
+      background: $base-color;
       text-align: center;
       line-height: 20px;
       font-size: 0.6rem;
