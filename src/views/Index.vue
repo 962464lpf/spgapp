@@ -55,7 +55,7 @@
           </li>
           <li @click="jumpTo('/gzdb')">
             <p><i class="el-icon-s-order"></i></p>
-            <p>任务代办</p>
+            <p>任务待办</p>
           </li>
 
           <li>
