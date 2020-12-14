@@ -127,7 +127,14 @@ export default {
       selected1: '1',
       selected2: '1',
       selected3: '1',
-      colors: ['#153a6e'],
+      colors: [
+        '#0b3a8a',
+        '#1767ac',
+        '#5480bd',
+        '#88a0ce',
+        '#b7c5e2',
+        '#e7e9f5',
+      ],
       chartData: {
         columns: ['日期', '数量'],
         rows: [

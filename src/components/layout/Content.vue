@@ -24,7 +24,7 @@ export default {
   height: 100%;
   overflow: hidden;
   .mint-header {
-    background: #153a6e;
+    background: $base-color;
     h1 {
       font-size: 1rem;
     }
