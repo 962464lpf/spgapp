@@ -30,7 +30,7 @@ const routes = [
       },
       {
         path: '/gzdb',
-        name: '任务代办',
+        name: '任务待办',
         component: () => import('../views/index/Gzdb.vue'),
       },
       {
@@ -57,6 +57,11 @@ const routes = [
         path: '/gqj',
         name: '工器具',
         component: () => import('../views/index/Gqj.vue'),
+      },
+      {
+        path: '/gqjsh',
+        name: '工器具审核',
+        component: () => import('../views/index/Gqjsh'),
       },
       {
         path: '/bpbj',

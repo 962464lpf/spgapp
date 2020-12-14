@@ -58,7 +58,7 @@
             <p>任务待办</p>
           </li>
 
-          <li>
+          <li @click="jumpTo('/gqj')">
             <p><i class="el-icon-s-grid"></i></p>
             <p>工器具</p>
           </li>
