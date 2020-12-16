@@ -3,36 +3,36 @@
     <div class="title">供电所移动作业管理系统</div>
     <div class="header1">
       <div class="info">
-        <p>
+        <p @click="drawer = true">
           <i class="el-icon-user"></i>
           <span>王小二</span>
         </p>
         <p>
-          <el-select v-model="value" placeholder="请选择">
-            <el-option
-              v-for="item in options"
-              :key="item.value"
-              :label="item.label"
-              :value="item.value"
-            >
+          <el-select v-model="value"
+                     placeholder="请选择">
+            <el-option v-for="item in options"
+                       :key="item.value"
+                       :label="item.label"
+                       :value="item.value">
             </el-option>
           </el-select>
         </p>
-        <p>
-          <el-badge :value="0" class="item">
+        <p @click="jumpTo('/message')">
+          <el-badge :value="0"
+                    class="item">
             <i class="el-icon-bell"></i>
           </el-badge>
         </p>
       </div>
       <ul class="work">
-        <li>
+        <li  @click="jumpTo('/gzdblist')">
           <p>0</p>
-          <p>待办任务</p>
+          <p>待办事项</p>
         </li>
-        <li>
+        <!-- <li>
           <p>0</p>
           <p>已办任务</p>
-        </li>
+        </li> -->
         <li>
           <p></p>
           <p></p>
@@ -53,7 +53,7 @@
             <p><i class="el-icon-goods"></i></p>
             <p>考勤打卡</p>
           </li>
-          <li @click="jumpTo('/gzdb')">
+          <li @click="jumpTo('/gzdblist')">
             <p><i class="el-icon-s-order"></i></p>
             <p>任务待办</p>
           </li>
@@ -128,6 +128,42 @@
         </ul>
       </div>
     </div>
+    <el-drawer title="设置"
+               :visible.sync="drawer"
+               direction="ltr"
+               size='80%'
+               :withHeader='false'>
+  <h3 class="mt10 mb10" style="text-align: center;">设置</h3>
+      <mt-cell title="修改密码" class="mt10 mb10"
+               to=""
+               is-link
+               value="">
+      </mt-cell>
+      <mt-cell title="手写签名"
+               to=""
+               is-link
+               value="">
+      </mt-cell>
+      <mt-cell title="安全管理"
+               to=""
+               is-link
+               value="">
+      </mt-cell>
+      <mt-cell title="消息管理"
+               to=""
+               is-link
+               value="">
+      </mt-cell>
+      <mt-cell title="清除缓存"
+               to=""
+               is-link
+               value="">
+      </mt-cell>
+      <div style="text-align: center;">
+        <mt-button type="primary">退出登录</mt-button>
+      </div>
+
+    </el-drawer>
   </div>
 </template>
 
@@ -135,6 +171,7 @@
 export default {
   data() {
     return {
+      drawer: false,
       options: [
         {
           value: '选项1',
@@ -203,7 +240,7 @@ export default {
     .work {
       display: flex;
       height: 5rem;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding-bottom: 20px;
       li {

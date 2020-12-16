@@ -29,6 +29,11 @@ const routes = [
         component: () => import('../views/Info.vue'),
       },
       {
+        path: '/gzdblist',
+        name: '任务待办',
+        component: () => import('../views/index/GzdbList.vue'),
+      },
+      {
         path: '/gzdb',
         name: '任务待办',
         component: () => import('../views/index/Gzdb.vue'),
@@ -59,9 +64,9 @@ const routes = [
         component: () => import('../views/index/Gqj.vue'),
       },
       {
-        path: '/gqjsh',
+        path: '/gqj/ghsh',
         name: '工器具审核',
-        component: () => import('../views/index/Gqjsh'),
+        component: () => import('../views/index/GqjGhsh'),
       },
       {
         path: '/bpbj',

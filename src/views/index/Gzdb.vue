@@ -1,6 +1,6 @@
 <template>
   <div class="gzdb">
-    <mt-header title="任务待办">
+    <mt-header title="任务受理">
       <router-link to="/index" slot="left">
         <mt-button icon="back"></mt-button>
       </router-link>

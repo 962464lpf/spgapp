@@ -7,18 +7,16 @@
     </mt-header>
     
     <div class="pgd">
-      <mt-field label="工单号"></mt-field>
-      <mt-field label="任务名称"></mt-field>
-      <mt-field label="任务内容"></mt-field>
-      <mt-field label="工作类型"></mt-field>
+      <mt-field label="工单编号"></mt-field>
       <mt-field label="工作负责人"></mt-field>
-      <mt-field label="照片">
+      <mt-field label="归还人"></mt-field>
+      <mt-field label="上传附件">
         <el-upload action="" list-type="picture-card">
           <i class="el-icon-camera-solid"></i>
         </el-upload>
       </mt-field>
     </div>
-    <div class="btn" @click="jump">确认</div>
+    <div class="btn" @click="jump">保存确认</div>
   </div>
 </template>
 
