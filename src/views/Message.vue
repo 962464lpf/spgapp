@@ -9,8 +9,8 @@
 
     <mt-navbar v-model="selected">
       <mt-tab-item id="1">业务超期预警</mt-tab-item>
-      <mt-tab-item id="2">待办事项</mt-tab-item>
-      <mt-tab-item id="3">待审批</mt-tab-item>
+      <!-- <mt-tab-item id="2">待办事项</mt-tab-item>
+      <mt-tab-item id="3">待审批</mt-tab-item> -->
     </mt-navbar>
 
     <!-- tab-container -->

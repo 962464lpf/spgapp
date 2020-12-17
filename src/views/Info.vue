@@ -7,7 +7,7 @@
     </mt-cell>
     <mt-cell title="姓名" is-link>
       <span style="color: green">
-        王小二
+        王永涛
       </span>
     </mt-cell>
     <mt-cell title="电话" is-link>

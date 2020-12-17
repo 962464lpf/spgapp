@@ -48,7 +48,7 @@
           <div style="display: flex;">
             <img src="../../assets/img/tx.jpg" alt="" />
             <div>
-              <p>王小二</p>
+              <p>王永涛</p>
               <b>工号：12345</b>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default {
       windows: {
         position: [107.594127, 34.470633],
         content: `<div class="list">
-        <p>王小二</p>
+        <p>王永涛</p>
         <p>工号：12345</p>
         <p>当前业务：业扩报装</p>
         <p>附近的人：王小三</p>`,

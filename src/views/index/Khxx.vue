@@ -23,7 +23,7 @@
       </el-row>
       <div class="collapse">
         <el-collapse v-model="activeNames">
-          <el-collapse-item title="6113133711 | 王小二 | 1312525125" name="1">
+          <el-collapse-item title="6113133711 | 王永涛 | 1312525125" name="1">
             <div>
               <span>电能表资产编号：</span>
               <b>123456789</b>

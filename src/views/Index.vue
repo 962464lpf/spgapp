@@ -5,7 +5,7 @@
       <div class="info">
         <p @click="drawer = true">
           <i class="el-icon-user"></i>
-          <span>王小二</span>
+          <span>王永涛</span>
         </p>
         <p>
           <el-select v-model="value"
@@ -25,7 +25,7 @@
         </p>
       </div>
       <ul class="work">
-        <li  @click="jumpTo('/gzdblist')">
+        <li  @click="jumpTo('/dbsx')">
           <p>0</p>
           <p>待办事项</p>
         </li>

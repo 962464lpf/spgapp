@@ -29,6 +29,11 @@ const routes = [
         component: () => import('../views/Info.vue'),
       },
       {
+        path: '/dbsx',
+        name: 'dbsx',
+        component: () => import('../views/Dbsx.vue'),
+      },
+      {
         path: '/gzdblist',
         name: '任务待办',
         component: () => import('../views/index/GzdbList.vue'),

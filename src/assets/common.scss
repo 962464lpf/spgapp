@@ -178,3 +178,18 @@ img {
 .el-dialog__body {
   padding: 15px 20px !important;
 }
+
+.el-table thead{
+  th{
+    text-align: center !important;
+  }
+}
+
+.el-table tbody{
+  tr{
+    td{
+      text-align: center !important;
+
+    }
+  }
+}

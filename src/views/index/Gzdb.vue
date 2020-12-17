@@ -25,7 +25,6 @@
       <mt-field label="工作负责人"></mt-field>
       <mt-field label="工作成员"></mt-field>
       <mt-field label="车牌号"></mt-field>
-      <mt-field label="完成时间" type="date"></mt-field>
       <mt-field label="现场照片">
         <el-upload action="" list-type="picture-card">
           <i class="el-icon-camera-solid"></i>
