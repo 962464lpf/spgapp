@@ -66,6 +66,10 @@
             <i class="el-icon-s-comment"></i>
             <p>备品备件</p>
           </li>
+          <li @click="jumpTo('/jp')">
+            <i class="el-icon-s-comment"></i>
+            <p>教培</p>
+          </li>
         </ul>
       </div>
       <div class="list">
