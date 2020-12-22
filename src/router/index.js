@@ -88,6 +88,21 @@ const routes = [
         name: '客户信息查询',
         component: () => import('../views/index/Khxx.vue'),
       },
+      {
+        path: '/sxdt',
+        name: 'sxlt',
+        component: () => import('../views/index/Sxdt.vue'),
+      },
+      {
+        path: '/zsdt',
+        name: 'zslt',
+        component: () => import('../views/index/Zsdt.vue'),
+      },
+      {
+        path: '/dt',
+        name: 'dt',
+        component: () => import('../views/index/Shiti.vue'),
+      },
     ],
   },
 ]
