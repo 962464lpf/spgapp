@@ -22,24 +22,46 @@
         <el-button type="primary">正式考试<i class="el-icon-arrow-right el-icon--right"></i></el-button>
       </el-button-group>
     </el-row> -->
-    <div class="content-box">
-      <div class="box"
-           @click="jump('/sxdt')">
-        <span class="p1">顺序练题</span>
-        <span class="p2">100/300</span>
+    <div class="content1">
+      <div class="list">
+        <h3>
+          联系
+        </h3>
+        <ul>
+          <li>
+            <div class="box"
+                 @click="jump('/sxdt')">
+              <span class="p1">顺序练题</span>
+            </div>
+          </li>
+          <li @click="jumpTo('/gzdblist')">
+            <div class="box">
+              <span class="p1">随机练题</span>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="box">
-        <span class="p1">随机练题</span>
-        <span class="p2">100/300</span>
+      <div class="list">
+        <h3>
+          考试
+        </h3>
+        <ul>
+          <li>
+            <div class="box">
+              <p>模拟考试</p>
+            </div>
+          </li>
+          <li>
+            <div class="box"
+                 @click="jump('/zsdt')">
+              <p>正式考试</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="box">
-        <p>模拟考试</p>
-      </div>
-      <div class="box"
-           @click="jump('/zsdt')">
-        <p>正式考试</p>
-      </div>
+
     </div>
+  
   </div>
 </template>
  
@@ -67,8 +89,8 @@ export default {
     justify-content: space-around;
     align-items: center;
     .box {
-      height: 100px;
-      width: 100px;
+      height: 80px;
+      width: 80px;
       border-radius: 50%;
       background: #4dbdd7;
       text-align: center;
@@ -77,6 +99,46 @@ export default {
       align-items: center;
       justify-content: center;
       color: white;
+    }
+  }
+  .content1 {
+    padding: 20px 10px;
+    .list {
+      margin-bottom: 20px;
+      h3 {
+        font-size: 1rem;
+        padding-left: 10px;
+        border-left: 3px solid $base-color;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li {
+          i {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+          }
+          margin-top: 10px;
+          width: 25%;
+          font-size: 0.8rem;
+          // line-height: 1.8rem;
+          text-align: center;
+          color: $base-color;
+          .box {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: #4dbdd7;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+          }
+        }
+      }
     }
   }
 }

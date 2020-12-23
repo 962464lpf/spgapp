@@ -32,11 +32,13 @@
         <p class="mt10">答错率</p>
       </li>
     </ul>
-    <div class="btn" @click="jump">继续联系</div>
+    <div class="btn"
+         @click="jump">练习</div>
   </div>
 </template>
  
 <script>
+import { MessageBox } from 'mint-ui'
 export default {
   name: 'vueName',
   data() {
@@ -45,9 +47,11 @@ export default {
     }
   },
   methods: {
-    jump () {
-      this.$router.push('/dt')
-    }
+    jump() {
+      MessageBox.confirm('是否从上次位置继续练习?').then(() => {
+        this.$router.push('/dt')
+      })
+    },
   },
   mounted() {},
 }
