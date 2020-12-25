@@ -6,62 +6,64 @@
         <mt-button icon="back">返回</mt-button>
       </router-link>
     </mt-header>
-    <!-- <el-row class="mt10">
-      联系：
-      <el-button-group>
-        <el-button type="primary"
-                   icon="el-icon-arrow-left">顺序出题</el-button>
-        <el-button type="primary">随机出题<i class="el-icon-arrow-right el-icon--right"></i></el-button>
-      </el-button-group>
-    </el-row>
-    <el-row class="mt10">
-      考试：
-     <el-button-group>
-        <el-button type="primary"
-                   icon="el-icon-arrow-left">模拟考试</el-button>
-        <el-button type="primary">正式考试<i class="el-icon-arrow-right el-icon--right"></i></el-button>
-      </el-button-group>
-    </el-row> -->
+
     <div class="content1">
       <div class="list">
         <h3>
-          联系
+          每日必做
         </h3>
-        <ul>
-          <li>
-            <div class="box"
-                 @click="jump('/sxdt')">
-              <span class="p1">顺序练题</span>
-            </div>
-          </li>
-          <li @click="jumpTo('/gzdblist')">
-            <div class="box">
-              <span class="p1">随机练题</span>
-            </div>
-          </li>
-        </ul>
+        <div style="height:200px"
+             @click="jump('/jrst')">
+          <mt-swipe :auto="4000">
+            <mt-swipe-item>
+              <img src="../../assets/img/img1.jpg"
+                   alt="">
+              <p>今日必做1</p>
+            </mt-swipe-item>
+            <mt-swipe-item> <img src="../../assets/img/img2.jpg"
+                   alt="">
+              <p>今日必做2</p>
+            </mt-swipe-item>
+          </mt-swipe>
+        </div>
       </div>
       <div class="list">
         <h3>
-          考试
+          专题训练1
         </h3>
-        <ul>
-          <li>
-            <div class="box">
-              <p>模拟考试</p>
-            </div>
-          </li>
-          <li>
-            <div class="box"
-                 @click="jump('/zsdt')">
-              <p>正式考试</p>
-            </div>
-          </li>
-        </ul>
+          <mt-cell title="xxx题库" label="强化训练xxx" is-link></mt-cell>
       </div>
-
+      <div class="list">
+        <h3>
+          专题训练2
+        </h3>
+          <mt-cell title="xxx题库" label="强化训练xxx" is-link></mt-cell>
+      </div>
+        <div class="list">
+        <h3>
+          专题训练3
+        </h3>
+          <mt-cell title="xxx题库" label="强化训练xxx" is-link></mt-cell>
+      </div>
     </div>
-  
+    <div class="footer-nav">
+      <mt-navbar v-model="selected">
+        <mt-tab-item id="1"
+                     @click="jump('/sxdt')">
+          <div @click="jump('/sxdt')">顺序练题</div>
+        </mt-tab-item>
+        <mt-tab-item id="2">
+          <div>随机练题</div>
+        </mt-tab-item>
+        <mt-tab-item id="3">
+          <div>模拟考试</div>
+        </mt-tab-item>
+        <mt-tab-item id="4">
+          <div @click="jump('/zsdt')">正式考试</div>
+        </mt-tab-item>
+      </mt-navbar>
+    </div>
+
   </div>
 </template>
  
@@ -69,7 +71,9 @@
 export default {
   name: 'vueName',
   data() {
-    return {}
+    return {
+      selected: '1',
+    }
   },
   methods: {
     jump(path) {
@@ -109,6 +113,7 @@ export default {
         font-size: 1rem;
         padding-left: 10px;
         border-left: 3px solid $base-color;
+        margin-bottom: 15px;
       }
       ul {
         display: flex;
@@ -140,6 +145,23 @@ export default {
         }
       }
     }
+  }
+  .mint-swipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    img{
+      height: 150px;
+      width: 100%;
+    }
+  }
+  .footer-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 </style>

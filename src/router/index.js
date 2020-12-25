@@ -103,6 +103,11 @@ const routes = [
         name: 'dt',
         component: () => import('../views/index/Shiti.vue'),
       },
+      {
+        path: '/jrst',
+        name: 'jrst',
+        component: () => import('../views/index/Jrst.vue'),
+      },
     ],
   },
 ]
