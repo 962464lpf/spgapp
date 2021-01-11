@@ -55,6 +55,9 @@
         <mt-tab-item id="2">
           <div>随机练题</div>
         </mt-tab-item>
+         <mt-tab-item id="5">
+          <div @click="jump('/jf')">积分</div>
+        </mt-tab-item>
         <mt-tab-item id="3">
           <div>模拟考试</div>
         </mt-tab-item>

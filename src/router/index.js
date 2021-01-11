@@ -108,6 +108,11 @@ const routes = [
         name: 'jrst',
         component: () => import('../views/index/Jrst.vue'),
       },
+      {
+        path: '/jf',
+        name: 'jf',
+        component: () => import('../views/index/Jf.vue'),
+      },
     ],
   },
 ]
